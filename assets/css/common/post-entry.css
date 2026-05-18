@@ -101,7 +101,41 @@
     height: auto;
 }
 
+body.list .entry-cover {
+    max-height: 260px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: var(--code-bg);
+}
+
+body.list .entry-cover img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media (max-width: 768px) {
+    body.list .entry-cover,
+    body.list .entry-cover img {
+        height: 180px;
+        max-height: 180px;
+    }
+}
+
 .entry-cover a {
     color: var(--secondary);
     box-shadow: 0 1px 0 var(--primary);
+}
+
+.project-group {
+    margin-bottom: calc(var(--gap) * 2);
+}
+
+.project-group-title {
+    margin: 8px 0 16px;
+    color: var(--primary);
+    font-size: 22px;
+    font-weight: var(--semibold);
 }
