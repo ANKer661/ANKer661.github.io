@@ -1,6 +1,8 @@
 baseURL: "https://ANKer661.github.io/"
 title: Zhengtao Gao
 theme: PaperMod
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -30,6 +32,7 @@ params:
     defaultTheme: light
     hideFooter: false
     disableThemeToggle: true
+    displayFullLangName: true
     ShowShareButtons: false
     ShowReadingTime: false
     disableSpecial1stPost: true
@@ -60,6 +63,8 @@ params:
               url: projects/
             - name: CV
               url: cv.pdf
+            - name: 中文
+              url: /zh/
 
     socialIcons:
         - name: Email
@@ -88,3 +93,35 @@ markup:
         endLevel: 2
         ordered: false
         startLevel: 2
+
+languages:
+    en:
+        label: English
+        weight: 1
+    zh:
+        label: 中文
+        locale: zh-CN
+        weight: 2
+        title: 高正韬
+        params:
+            description: "高正韬目前就读于卢加诺大学（USI）人工智能硕士项目，研究兴趣包括自监督学习、表征学习和构建高效的学习系统。"
+            label:
+                text: "高正韬"
+                icon: favicon.ico
+                iconHeight: 18
+            profileMode:
+                enabled: true
+                title: 高正韬
+                subtitle: "我目前就读于卢加诺大学（USI）人工智能硕士项目。我的研究经历和兴趣主要集中在自监督学习、表征学习和构建高效的学习系统。"
+                imageUrl: "profile.jpg"
+                imageWidth: 160
+                imageHeight: 160
+                buttons:
+                    - name: Papers
+                      url: /papers/
+                    - name: Projects
+                      url: /zh/projects/
+                    - name: CV
+                      url: /cv.pdf
+                    - name: English
+                      url: /

@@ -37,9 +37,11 @@
 {{- end }}
 
 {{- if eq .Section "projects" }}
+{{- $academicTitle := cond (eq .Lang "zh") "学术项目" "Academic Projects" }}
+{{- $funTitle := cond (eq .Lang "zh") "有趣的小项目" "Fun Projects" }}
 {{- $projectGroups := slice
-  (dict "Title" "Academic Projects" "Pages" (where $pages "Params.projectCategory" "academic"))
-  (dict "Title" "Fun Projects" "Pages" (where $pages "Params.projectCategory" "fun"))
+  (dict "Title" $academicTitle "Pages" (where $pages "Params.projectCategory" "academic"))
+  (dict "Title" $funTitle "Pages" (where $pages "Params.projectCategory" "fun"))
 }}
 
 {{- range $projectGroups }}

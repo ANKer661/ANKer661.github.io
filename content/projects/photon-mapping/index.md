@@ -2,7 +2,6 @@
 title: "Photon Mapping Renderer"
 date: 2025-12-01
 tags: ["computer graphics", "C++", "ray tracing", "photon mapping"]
-author: "Zhengtao Gao"
 projectCategory: "academic"
 description: "C++ photon mapping renderer with KD-tree acceleration for global illumination."
 summary: "A Computer Graphics rendering competition project implementing photon mapping in a C++ ray tracer."
@@ -15,6 +14,7 @@ editPost:
     Text: "GitHub repository"
 showToc: false
 disableAnchoredHeadings: true
+translationKey: "photon-mapping"
 ---
 
 Rendering competition project for Computer Graphics.

@@ -2,7 +2,6 @@
 title: "Contrastive Learning based Molecular Clustering"
 date: 2023-05-01
 tags: ["graph neural networks", "contrastive learning", "molecular dynamics", "representation learning"]
-author: "Zhengtao Gao"
 projectCategory: "academic"
 description: "Graduation thesis on contrastive representation learning for molecular dynamics trajectories."
 summary: "A thesis project adapting SwAV-style contrastive learning and GNN representations to molecular dynamics trajectories."
@@ -15,6 +14,7 @@ editPost:
     Text: "GitHub repository"
 showToc: false
 disableAnchoredHeadings: true
+translationKey: "molecular-clustering"
 ---
 
 Graduation thesis at the Laboratory of Chemoinformatics, Nankai University, advised by Prof. Wensheng Cai.

@@ -2,7 +2,6 @@
 title: "Reproduction of General Graph Random Features"
 date: 2025-12-01
 tags: ["graph deep learning", "reproducibility", "Numba", "optimization"]
-author: "Zhengtao Gao"
 projectCategory: "academic"
 description: "Reproducibility challenge for General Graph Random Features."
 summary: "A Graph Deep Learning reproducibility project reproducing experiments from General Graph Random Features."
@@ -15,9 +14,12 @@ cover:
     relative: true
 showToc: false
 disableAnchoredHeadings: true
+translationKey: "g-grfs"
 ---
 
 Reproducibility challenge project for Graph Deep Learning.
+
+Collaborators: Weiye Wang, Xingqiao Hu.
 
 - Reproduced all five experiments from *General Graph Random Features* (ICLR 2024).
 - Extended the original codebase with a partial implementation for Experiment 1.

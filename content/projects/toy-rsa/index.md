@@ -2,7 +2,6 @@
 title: "Toy RSA"
 date: 2024-05-01
 tags: ["cryptography", "RSA", "Python", "Streamlit", "toy project"]
-author: "Zhengtao Gao"
 projectCategory: "fun"
 description: "Python implementation of RSA encryption and decryption with an interactive Streamlit demo."
 summary: "A small educational RSA implementation with key generation, Miller-Rabin primality testing, encryption/decryption, and a Streamlit interface."
@@ -15,6 +14,7 @@ editPost:
     Text: "GitHub repository"
 showToc: false
 disableAnchoredHeadings: true
+translationKey: "toy-rsa"
 ---
 
 A toy implementation of the RSA encryption and decryption pipeline, built in Python with an interactive Streamlit interface.

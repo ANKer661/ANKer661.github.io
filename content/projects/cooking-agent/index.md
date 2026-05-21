@@ -2,7 +2,6 @@
 title: "Interactive Cooking Agent"
 date: 2025-12-01
 tags: ["retrieval augmented generation", "large language models", "LangGraph", "natural language processing"]
-author: "Zhengtao Gao"
 projectCategory: "academic"
 description: "RAG and LangGraph agent for conversational cooking assistance."
 summary: "A Natural Language Processing course project building a RAG-based interactive cooking assistant."
@@ -12,6 +11,7 @@ cover:
     relative: true
 showToc: false
 disableAnchoredHeadings: true
+translationKey: "cooking-agent"
 ---
 
 Course project for Natural Language Processing.

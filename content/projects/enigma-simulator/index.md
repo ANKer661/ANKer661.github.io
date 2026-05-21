@@ -2,7 +2,6 @@
 title: "Toy Enigma Simulator"
 date: 2024-05-01
 tags: ["cryptography", "Enigma machine", "Python", "Streamlit", "toy project"]
-author: "Zhengtao Gao"
 projectCategory: "fun"
 description: "Interactive Enigma machine simulator with configurable rotors, initial positions, and plugboard connections."
 summary: "A Streamlit-based simulator for experimenting with Enigma-style encryption and decryption in real time."
@@ -15,6 +14,7 @@ editPost:
     Text: "GitHub repository"
 showToc: false
 disableAnchoredHeadings: true
+translationKey: "enigma-simulator"
 ---
 
 A toy simulator of the historical Enigma machine, built with Python and Streamlit for real-time interaction.

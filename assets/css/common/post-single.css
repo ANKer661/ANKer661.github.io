@@ -20,10 +20,19 @@
 }
 
 .post-meta .i18n_list li {
-    display: inline-flex;
+    display: inline;
     list-style: none;
-    margin: auto 3px;
-    box-shadow: 0 1px 0 var(--secondary);
+    margin: 0 3px;
+}
+
+.post-meta .i18n_list {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.post-meta .i18n_list a {
+    display: inline;
 }
 
 .post-content {

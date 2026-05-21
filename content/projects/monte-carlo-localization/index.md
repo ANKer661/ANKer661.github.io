@@ -2,7 +2,6 @@
 title: "Monte Carlo Localization Simulator"
 date: 2025-05-01
 tags: ["robotics", "Python", "Monte Carlo localization", "NumPy"]
-author: "Zhengtao Gao"
 projectCategory: "academic"
 description: "Python simulator for probabilistic robot localization with vectorized ray sensing."
 summary: "A Robotics course project implementing a configurable Monte Carlo Localization simulator."
@@ -15,6 +14,7 @@ editPost:
     Text: "GitHub repository"
 showToc: false
 disableAnchoredHeadings: true
+translationKey: "monte-carlo-localization"
 ---
 
 Course project for Robotics.

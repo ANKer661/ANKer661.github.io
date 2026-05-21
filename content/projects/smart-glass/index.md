@@ -2,12 +2,12 @@
 title: "Cross-User Generalization and Personalization for Multimodal Smart-Glass Data"
 date: 2026-03-01
 tags: ["multimodal learning", "representation learning", "self-supervised learning", "personalization", "human-centered sensing"]
-author: "Zhengtao Gao"
 projectCategory: "academic"
 description: "Research project on data-efficient personalization for multimodal smart-glass sensor data."
 summary: "A research project at USI studying cross-user domain shift and low-label personalization for multimodal smart-glass sensor data."
 showToc: false
 disableAnchoredHeadings: true
+translationKey: "smart-glass"
 ---
 
 Research assistant project at the People-Centered Computing Lab, USI, advised by Dr. Martin Gjoreski.
