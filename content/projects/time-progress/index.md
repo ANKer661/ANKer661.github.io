@@ -7,7 +7,7 @@ description: "macOS widgets for visualizing the progress of the day, month, and 
 summary: "A macOS widget app that keeps the progress of the day, month, and year visible from the Home Screen."
 cover:
     image: "cover.png"
-    alt: "TimeProgress medium widgets"
+    alt: "TimeProgress cover illustration"
     relative: true
 editPost:
     URL: "https://github.com/ANKer661/TimeProgress"
@@ -22,6 +22,10 @@ TimeProgress is a small macOS widget app for staying aware of how much time has 
 - Built Home Screen widgets with small and medium layouts.
 - Added automatic widget refresh every 15 minutes.
 - Used dynamic colors to make progress states easy to scan.
+
+##### Demo
+
+![TimeProgress medium widgets](screenshot.png)
 
 ##### Links
 

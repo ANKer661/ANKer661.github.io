@@ -7,7 +7,7 @@ description: "用于可视化 day、month 和 year 进度的 macOS widget app。
 summary: "macOS widget app，在桌面上可视化 day、month 和 year 的时间进度。"
 cover:
     image: "cover.png"
-    alt: "TimeProgress medium widgets"
+    alt: "TimeProgress cover illustration"
     relative: true
 editPost:
     URL: "https://github.com/ANKer661/TimeProgress"
@@ -22,6 +22,10 @@ TimeProgress 是一个小型 macOS widget app，用来把当天、当月和当�
 - 使用 SwiftUI 和 WidgetKit 实现 small 和 medium 两种尺寸的 Home Screen widget。
 - 设置每 15 分钟自动刷新，保持进度显示及时更新。
 - 使用动态颜色区分不同进度状态，让信息更容易扫读。
+
+##### Demo
+
+![TimeProgress medium widgets](screenshot.png)
 
 ##### 链接
 

@@ -7,7 +7,7 @@ description: "Interactive Enigma machine simulator with configurable rotors, ini
 summary: "A Streamlit-based simulator for experimenting with Enigma-style encryption and decryption in real time."
 cover:
     image: "cover.png"
-    alt: "Toy Enigma Simulator Streamlit demo"
+    alt: "Toy Enigma Simulator cover illustration"
     relative: true
 editPost:
     URL: "https://github.com/ANKer661/Toy_Enigma_Simulator"
@@ -23,6 +23,10 @@ A toy simulator of the historical Enigma machine, built with Python and Streamli
 - Supported choosing 3 rotors from 5 available rotor definitions.
 - Added real-time encryption and decryption through a Streamlit interface.
 - Displayed the current machine state so users can inspect the active configuration.
+
+##### Demo
+
+![Toy Enigma Simulator Streamlit demo](screenshot.png)
 
 ##### Links
 

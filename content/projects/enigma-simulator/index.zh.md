@@ -7,7 +7,7 @@ description: "带可配置 rotors、initial positions 和 plugboard 的 Enigma m
 summary: "基于 Streamlit 的 Enigma machine 模拟器，用于实时实验加密和解密过程。"
 cover:
     image: "cover.png"
-    alt: "Toy Enigma Simulator Streamlit demo"
+    alt: "Toy Enigma Simulator cover illustration"
     relative: true
 editPost:
     URL: "https://github.com/ANKer661/Toy_Enigma_Simulator"
@@ -23,6 +23,10 @@ translationKey: "enigma-simulator"
 - 支持从 5 个预定义转子中选择 3 个组成机器配置。
 - 通过 Streamlit 界面实时输入文本并查看加密 / 解密结果。
 - 展示当前机器状态，方便检查活跃配置和理解加密过程。
+
+##### Demo
+
+![Toy Enigma Simulator Streamlit demo](screenshot.png)
 
 ##### 链接
 

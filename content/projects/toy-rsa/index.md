@@ -7,7 +7,7 @@ description: "Python implementation of RSA encryption and decryption with an int
 summary: "A small educational RSA implementation with key generation, Miller-Rabin primality testing, encryption/decryption, and a Streamlit interface."
 cover:
     image: "cover.png"
-    alt: "Toy RSA Streamlit demo"
+    alt: "Toy RSA cover illustration"
     relative: true
 editPost:
     URL: "https://github.com/ANKer661/Toy_RSA"
@@ -23,6 +23,10 @@ A toy implementation of the RSA encryption and decryption pipeline, built in Pyt
 - Implemented prime number generation and Miller-Rabin primality testing.
 - Built core encryption/decryption operations and message pre-/post-processing utilities.
 - Added a Streamlit demo to show intermediate steps and final encryption/decryption results.
+
+##### Demo
+
+![Toy RSA Streamlit demo](screenshot.png)
 
 ##### Links
 
