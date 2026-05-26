@@ -22,8 +22,8 @@ Research project / reproduction study.
 Collaborators: Xingqiao Hu, Yiran Wang, Kangyue Xu.
 
 - Reproduced CBM, CEM, Autoregressive CBM, and SCBM on synthetic, CUB, and CIFAR-10 benchmarks, analyzing concept prediction, target accuracy, calibration, and intervention behavior.
-- Refactored the original research codebase into modular training and intervention pipelines, and optimized bottlenecks with vectorized concept modules, batched Monte Carlo sampling, efficient data loading, optimized intervention loops and GPU-friendly SCBM intervention solvers.
-- Reduced estimated full experimental runtime from over 1,200 hours to around 60 hours while preserving experimental semantics, making future research on CBMs much more accessible and efficient.
+- Refactored the original research codebase into modular training and intervention pipelines, and resolved key performance bottlenecks through vectorized concept modules, batched Monte Carlo sampling, optimized data loading, and GPU-accelerated SCBM intervention solvers.
+- Reduced estimated full experimental runtime from 1,200 hours to around 60 hours while preserving experimental semantics, making future research on CBMs much more accessible and efficient.
 
 ##### Links
 
