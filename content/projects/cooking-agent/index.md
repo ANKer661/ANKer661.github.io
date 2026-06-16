@@ -1,10 +1,10 @@
 ---
-title: "Interactive Cooking Agent"
+title: "Long-Horizon Interactive Agent Harness"
 date: 2025-12-01
-tags: ["retrieval augmented generation", "large language models", "LangGraph", "natural language processing"]
+tags: ["large language models", "agent harness", "state management", "retrieval augmented generation", "natural language processing"]
 projectCategory: "academic"
-description: "RAG and LangGraph agent for conversational cooking assistance."
-summary: "A Natural Language Processing course project building a RAG-based interactive cooking assistant."
+description: "A state-driven Agent Harness framework for long-horizon interactive task execution."
+summary: "A state-driven Agent Harness that turns one-shot LLM interactions into trackable, state-managed, step-by-step task execution."
 cover:
     image: "arch.png"
     alt: "Agent architecture diagram"
@@ -14,9 +14,12 @@ disableAnchoredHeadings: true
 translationKey: "cooking-agent"
 ---
 
-Course project for Natural Language Processing.
+Natural Language Processing course project, October 2025 - December 2025.
 
-- Built a RAG pipeline indexing 2.2M recipes with FAISS IVF quantization and sentence transformers.
-- Powered semantic retrieval for a locally deployed Qwen3-8B model via Ollama.
-- Designed a multi-node LangGraph agent with intent classification, context-aware memory summarization, and step-by-step interactive guidance.
-- Conducted a qualitative LLM-as-judge evaluation using Gemini 3 Pro; the agent scored 5/5 in interactive experience versus 1/5 for a naive retrieval-only baseline.
+- Designed and implemented a state-driven Agent Harness framework for long-horizon interactive tasks, addressing the difficulty of maintaining stable task state across extended LLM interactions.
+- Abstracted two core components, `AgentRuntime` and `TaskSpec`, to decouple the general execution loop, tool use, and state updates from task-specific logic.
+- Supported plugin-style task integration through `TaskSpec`, with deterministic task-side state transitions for managing progress and reducing state drift in multi-turn interactions.
+- Validated the framework with a cooking assistant task, covering intent recognition, RAG-based recipe retrieval, step progression, help QA, progress checks, and completion detection.
+- Used conversation summaries to compress long-running task state instead of directly appending full dialogue history, improving context scalability for extended conversations.
+- Generated 20 multi-turn interaction trajectories across three scenarios with Gemma4-31B, and compared the Harness agent against a stateless RAG baseline using GPT-5.5 as an LLM-as-a-Judge.
+- The Harness agent won 18 out of 20 cases; state management improved from 1.0 to 4.30, multi-turn interaction quality improved from 1.0 to 4.6, while recipe restatement accuracy showed a measured trade-off, decreasing from 4.1 to 3.8.
