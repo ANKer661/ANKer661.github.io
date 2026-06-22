@@ -14,7 +14,7 @@ disableAnchoredHeadings: true
 translationKey: "cooking-agent"
 ---
 
-自然语言处理课程项目，2025.10 - 2025.12。
+2025.10 - 2025.12。
 
 - 针对长流程任务中 LLM 难以稳定维护任务状态的问题，设计并实现面向任务执行场景的状态驱动 Agent Harness 框架，将一次性问答式 LLM 扩展为可追踪进度、可管理状态、可逐步推进任务的交互式 Agent。
 - 抽象 `AgentRuntime` 与 `TaskSpec` 两大核心组件，将通用执行循环、Tool-use、状态更新与具体任务逻辑解耦。

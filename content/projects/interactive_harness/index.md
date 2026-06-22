@@ -14,7 +14,7 @@ disableAnchoredHeadings: true
 translationKey: "cooking-agent"
 ---
 
-Natural Language Processing course project, October 2025 - December 2025.
+October 2025 - December 2025.
 
 - Designed and implemented a state-driven Agent Harness framework for long-horizon interactive tasks, addressing the difficulty of maintaining stable task state across extended LLM interactions.
 - Abstracted two core components, `AgentRuntime` and `TaskSpec`, to decouple the general execution loop, tool use, and state updates from task-specific logic.
