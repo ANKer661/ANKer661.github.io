@@ -102,7 +102,7 @@
 }
 
 body.list .entry-cover {
-    max-height: 260px;
+    max-height: 380px;
     overflow: hidden;
     border-radius: var(--radius);
     background: var(--code-bg);
@@ -111,7 +111,7 @@ body.list .entry-cover {
 body.list .entry-cover img {
     display: block;
     width: 100%;
-    height: 260px;
+    height: 380px;
     object-fit: contain;
     object-position: center;
 }
