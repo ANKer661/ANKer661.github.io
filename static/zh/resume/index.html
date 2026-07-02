@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>高正韬 - Resume</title>
+    <link rel="stylesheet" href="./styles/resume.css" />
+  </head>
+  <body>
+    <button class="download-button" type="button" onclick="window.print()">Download PDF</button>
+    <main id="resume" class="page"></main>
+    <script src="./content/resume-data.js"></script>
+    <script>
+      const el = document.getElementById("resume");
+
+      function list(items, className = "bullets") {
+        return `<ul class="${className}">${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+      }
+
+      function section(title, icon, body) {
+        return `
+          <section class="section">
+            <div class="section-title" data-icon="${icon}">${title}</div>
+            <div class="section-line"></div>
+            ${body}
+          </section>
+        `;
+      }
+
+      function renderEducation() {
+        const data = window.RESUME_DATA;
+        return data.education
+          .map(
+            (item) => `
+              <div class="education-item">
+                <div>
+                  <h3>${item.school}</h3>
+                  <div class="education-detail-row">
+                    <p>${item.degree}</p>
+                    <p class="education-gpa">${item.gpa}</p>
+                  </div>
+                  <p class="education-award">${item.award}</p>
+                </div>
+                <div class="date">${item.date}</div>
+              </div>
+            `
+          )
+          .join("");
+      }
+
+      function renderPublications() {
+        const data = window.RESUME_DATA;
+        return data.publications
+          .map(
+            (pub) => `
+              <div class="publication">
+                <div class="pub-head">
+                  <h3 class="pub-title">${pub.title}</h3>
+                  <div class="pub-meta">${pub.meta}</div>
+                </div>
+                ${list(pub.bullets)}
+              </div>
+            `
+          )
+          .join("");
+      }
+
+      function renderProjects() {
+        const data = window.RESUME_DATA;
+        return data.projects
+          .map(
+            (project) => `
+              <article class="project">
+                <div>
+                  <div class="project-head">
+                    <h3 class="project-title">${project.title}</h3>
+                    <div class="project-tech">${project.tech}</div>
+                    <div class="project-date">${project.date}</div>
+                  </div>
+                  ${list(project.bullets)}
+                </div>
+              </article>
+            `
+          )
+          .join("");
+      }
+
+      function renderSkills() {
+        const data = window.RESUME_DATA;
+        return list(data.skills, "skill-list");
+      }
+
+      function renderResume() {
+        const data = window.RESUME_DATA;
+        el.innerHTML = `
+        <h1 class="name">${data.name}</h1>
+        <div class="contact">${data.contact.map((x) => {
+          if (typeof x === "string") return `<span>${x}</span>`;
+          return `<a href="${x.href}" target="_blank" rel="noreferrer">${x.label}</a>`;
+        }).join("")}</div>
+        <p class="summary">${data.summary}</p>
+        <div class="rule"></div>
+
+        <div class="top-grid">
+          ${section("教育背景", "◆", renderEducation())}
+          ${section("技术关键词", "◎", list(data.interests, "compact-list"))}
+        </div>
+
+        ${section("论文发表", "▣", renderPublications())}
+        ${section("研究与工程项目", "▰", renderProjects())}
+        ${section("专业技能", "⚙", renderSkills())}
+      `;
+      }
+
+      function loadPrivateData() {
+        const script = document.createElement("script");
+        script.src = "./content/resume-private.js";
+        script.onload = () => {
+          if (window.RESUME_PRIVATE_DATA) {
+            window.RESUME_DATA = { ...window.RESUME_DATA, ...window.RESUME_PRIVATE_DATA };
+          }
+          renderResume();
+        };
+        script.onerror = renderResume;
+        document.head.appendChild(script);
+      }
+
+      loadPrivateData();
+    </script>
+  </body>
+</html>

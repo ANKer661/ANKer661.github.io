@@ -2,3 +2,9 @@
 public/
 resources/
 .hugo_build.lock
+
+# macOS metadata
+.DS_Store
+
+# Local-only resume private contact data
+static/zh/resume/content/resume-private.js

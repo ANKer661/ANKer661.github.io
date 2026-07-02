@@ -122,6 +122,17 @@ languages:
                     - name: Projects
                       url: /zh/projects/
                     - name: CV
-                      url: /cv.pdf
+                      url: /zh/resume/
                     - name: English
                       url: /
+        menu:
+            main:
+                - name: Papers
+                  url: /papers/
+                  weight: 1
+                - name: Projects
+                  url: /zh/projects/
+                  weight: 2
+                - name: CV
+                  url: /zh/resume/
+                  weight: 3
