@@ -21,7 +21,7 @@ menu:
           url: projects/
           weight: 2
         - name: CV
-          url: cv.pdf
+          url: resume/
           weight: 3
 
 params:
@@ -62,7 +62,7 @@ params:
             - name: Projects
               url: projects/
             - name: CV
-              url: cv.pdf
+              url: resume/
             - name: 中文
               url: /zh/
 

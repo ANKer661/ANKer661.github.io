@@ -8,3 +8,4 @@ resources/
 
 # Local-only resume private contact data
 static/zh/resume/content/resume-private.js
+static/resume/content/resume-private.js

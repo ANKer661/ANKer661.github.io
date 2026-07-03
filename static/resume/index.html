@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>高正韬 - Resume</title>
+    <title>Zhengtao Gao - Resume</title>
     <link rel="stylesheet" href="./styles/resume.css" />
   </head>
   <body>
@@ -17,9 +17,9 @@
         return `<ul class="${className}">${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
       }
 
-      function section(title, icon, body) {
+      function section(title, icon, body, className = "") {
         return `
-          <section class="section">
+          <section class="section ${className}">
             <div class="section-title" data-icon="${icon}">${title}</div>
             <div class="section-line"></div>
             ${body}
@@ -92,11 +92,11 @@
 
       function contactIconPath(item) {
         const label = (typeof item === "string" ? item : item.label).toLowerCase();
-        if (label.includes("website") || label.includes("homepage") || label.includes("主页")) return "../../resume/icons/house.svg";
-        if (label.startsWith("github:")) return "../../resume/icons/github-brands-solid-full.svg";
-        if (label.includes("wechat") || label.includes("微信")) return "../../resume/icons/weixin-brands-solid-full.svg";
-        if (label.includes("phone") || label.includes("电话")) return "../../resume/icons/phone.svg";
-        return "../../resume/icons/mail.svg";
+        if (label.includes("website") || label.includes("homepage") || label.includes("主页")) return "./icons/house.svg";
+        if (label.startsWith("github:")) return "./icons/github-brands-solid-full.svg";
+        if (label.includes("wechat") || label.includes("微信")) return "./icons/weixin-brands-solid-full.svg";
+        if (label.includes("phone") || label.includes("电话")) return "./icons/phone.svg";
+        return "./icons/mail.svg";
       }
 
       function renderContactItem(item) {
@@ -116,13 +116,13 @@
         <div class="rule"></div>
 
         <div class="top-grid">
-          ${section("教育背景", "◆", renderEducation())}
-          ${section("技术关键词", "◎", list(data.interests, "compact-list"))}
+          ${section("Education", "◆", renderEducation())}
+          ${section("Keywords", "◎", list(data.interests, "compact-list"))}
         </div>
 
-        ${section("论文发表", "▣", renderPublications())}
-        ${section("研究与工程项目", "▰", renderProjects())}
-        ${section("专业技能", "⚙", renderSkills())}
+        ${section("Publications", "▣", renderPublications())}
+        ${section("Research & Engineering Projects", "▰", renderProjects())}
+        ${section("Skills", "⚙", renderSkills(), "skills-section")}
       `;
       }
 
