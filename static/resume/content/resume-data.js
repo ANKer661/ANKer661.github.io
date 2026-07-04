@@ -9,7 +9,7 @@ window.RESUME_DATA = {
     "MSc student in Artificial Intelligence, ranked first in the program. Research and engineering experience around foundation-model algorithms and systems, with a focus on representation learning, self-supervised pretraining, distributed LLM training, and agent runtimes.",
   education: [
     {
-      school: "Universita della Svizzera italiana (USI), Lugano, Switzerland",
+      school: "Università della Svizzera italiana (USI), Lugano, Switzerland",
       date: "Sep 2024 - Feb 2027",
       degree: "MSc in Artificial Intelligence",
       gpa: "GPA: 9.5/10 (#rank 1)",
