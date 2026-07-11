@@ -36,7 +36,8 @@ window.RESUME_DATA = {
       title: "Towards Practical Reproduction of Stochastic Concept Bottleneck Models",
       meta: "第一作者 | Under review at TMLR",
       bullets: [
-        "将 SCBM 中关键约束优化问题重构为向量化 GPU 求解形式，并优化模型定义、批量执行与评测流程，实现约 20× 端到端加速（1200h → 60h）。",
+        "系统梳理并定位 SCBM 复现实验全流程中的性能瓶颈，针对模型定义、批量执行、数据加载与评测流程进行优化，实现约 20× 端到端加速（1200h → 60h）。",
+        "以 GPU 批量并行为目标，对 intervention 求解器进行算法–系统协同设计（co-design）：将原约束优化问题拆分为可闭式求解的主步骤与近似约束修正步骤，设计适合 GPU 向量化执行的迭代算法，替代逐样本运行的 CPU SLSQP 求解器，实现该环节约 13 倍加速。",
       ],
     },
     {
@@ -52,19 +53,6 @@ window.RESUME_DATA = {
   projects: [
     {
       number: "1",
-      icon: "RL",
-      title: "高效多模态表示学习与跨用户泛化",
-      tech: "PyTorch, ViT, MAE, 表征学习",
-      date: "2025.07 - 2026.03",
-      bullets: [
-        "设计并实现面向多模态时序传感数据的<strong>自监督表示学习框架</strong>，实现跨用户泛化与个性化适配；项目为卢加诺大学 & Emteq Labs 校企合作。",
-        "构建原生多模态架构，将多源传感器信号映射至<strong>统一表示空间</strong>，并基于 <strong>MAE</strong> 对 ViT 进行预训练；设计模态感知 embedding 策略和掩码策略。",
-        "将欧拉角作为任务相关先验融入表示学习过程；提出<strong>用户库与用户路由机制</strong>，利用用户身份作为零成本弱监督信号，在提升跨用户泛化能力的同时实现用户个性化适配。",
-        "在用户级别划分的 5-fold 交叉验证下模拟新用户冷启动场景，仅使用 <strong>5% 标注数据</strong>微调预训练模型，在表情识别和认知负荷估计两项任务上均达到或超越 <strong>100% 数据从头训练 baseline</strong>。",
-      ],
-    },
-    {
-      number: "2",
       icon: "TP",
       title: "Mini-Megatron：基于 MiniMind 的分布式训练扩展",
       tech: "PyTorch, LLM, 分布式训练",
@@ -74,6 +62,19 @@ window.RESUME_DATA = {
         "基于 torch.autograd.Function 实现通信原语（AllReduce、AllGather、ReduceScatter），并构建并行 Linear、GQA Attention、SwiGLU MLP、Transformer Block、Pipeline Stage 与 P2P 通信模块。",
         "实现<strong>分布式 Cross Entropy 计算</strong>，避免在计算 loss 时 gather 完整 logits；构建序列并行数据流、激活值重计算机制与 <strong>PP 1F1B 调度</strong>；实现异步线性层，将输入梯度通信与权重梯度 GEMM 重叠。",
         "构建原始模型与并行版本的端到端一致性测试，前向 logits、反向梯度及 100 步 AdamW 后参数最大误差分别控制在 <strong>1e-6、1e-8 和 1e-5</strong> 以内。双卡 TP 相比单卡降低约 <strong>44%</strong> 峰值显存，异步通信进一步提升约 <strong>9%</strong> 训练吞吐；SP 与 VP 在基础 TP 上额外降低约 <strong>14%</strong> 激活显存。",
+      ],
+    },
+    {
+      number: "2",
+      icon: "RL",
+      title: "高效多模态表示学习与跨用户泛化",
+      tech: "PyTorch, ViT, MAE, 表征学习",
+      date: "2025.07 - 2026.03",
+      bullets: [
+        "设计并实现面向多模态时序传感数据的<strong>自监督表示学习框架</strong>，实现跨用户泛化与个性化适配；项目为卢加诺大学 & Emteq Labs 校企合作。",
+        "构建原生多模态架构，将多源传感器信号映射至<strong>统一表示空间</strong>，并基于 <strong>MAE</strong> 对 ViT 进行预训练；设计模态感知 embedding 策略和掩码策略。",
+        "将欧拉角作为任务相关先验融入表示学习过程；提出<strong>用户库与用户路由机制</strong>，利用用户身份作为零成本弱监督信号，在提升跨用户泛化能力的同时实现用户个性化适配。",
+        "在用户级别划分的 5-fold 交叉验证下模拟新用户冷启动场景，仅使用 <strong>5% 标注数据</strong>微调预训练模型，在表情识别和认知负荷估计两项任务上均达到或超越 <strong>100% 数据从头训练 baseline</strong>。",
       ],
     },
     {
@@ -93,7 +94,7 @@ window.RESUME_DATA = {
   skills: [
     "熟悉表示学习、自监督学习、Transformer、图神经网络和多模态学习等深度学习方法，关注基础模型中的高质量表征学习问题。",
     "熟悉 PyTorch 模型开发与实验流程，能够使用 Python、pandas / NumPy、Linux 和 Git 完成数据处理、模型训练与实验评估。",
-    "了解大模型分布式训练中的数据并行、张量并行、流水线并行、Sequence / Vocab Parallel 等方法，具备分布式学习相关实践经验。",
+    "熟悉大模型分布式训练中的数据并行、张量并行、流水线并行、Sequence / Vocab Parallel 等方法，具备分布式学习相关实践经验。",
     "了解 LangChain / LangGraph Agent 开发框架，了解 RAG、Tool-use、Harness、Memory 和 LLM-as-a-Judge 等 Agent 相关技术。",
     "英语能力良好（TOEFL 100），可阅读英文论文、技术文档并进行英文项目写作与交流。",
   ],

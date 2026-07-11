@@ -35,7 +35,8 @@ window.RESUME_DATA = {
       title: "Towards Practical Reproduction of Stochastic Concept Bottleneck Models",
       meta: "First author | Under review at TMLR",
       bullets: [
-        "Reformulated the key constrained optimization problem in SCBM into a vectorized GPU-friendly solver, and optimized model definitions, batched execution, and evaluation pipelines to achieve about 20x end-to-end acceleration (1200h -> 60h).",
+        "Reformulated key SCBM bottlenecks into vectorized GPU-friendly components, and optimized model definitions, batched execution, data loading, and evaluation pipelines to achieve about 20x end-to-end acceleration (1200h -> 60h).",
+        "Co-designed the intervention solver for batched GPU parallelism: decomposed the original constrained optimization into a closed-form main step and an approximate constraint-correction step, designing a GPU-vectorized iterative algorithm that replaces per-sample CPU SLSQP and accelerates this stage by about 13x.",
       ],
     },
     {
@@ -50,19 +51,6 @@ window.RESUME_DATA = {
   projects: [
     {
       number: "1",
-      icon: "RL",
-      title: "Efficient Multimodal Representation Learning and Cross-user Generalization",
-      tech: "PyTorch, ViT, MAE",
-      date: "Jul 2025 - Mar 2026",
-      bullets: [
-        "Designed and implemented a <strong>self-supervised representation learning framework</strong> for multimodal time-series sensor data, targeting cross-user generalization and personalized adaptation; industry collaboration between USI and Emteq Labs.",
-        "Built a native multimodal architecture that maps heterogeneous sensor streams into a <strong>shared representation space</strong>, and pretrained a ViT backbone with <strong>MAE</strong>; designed modality-aware embeddings and masking strategies.",
-        "Injected Euler angles as task-relevant priors into the representation learning process; proposed a <strong>user library and user routing mechanism</strong> that uses user identity as a zero-cost weak supervision signal for both generalization and personalization.",
-        "Under user-level 5-fold cross-validation simulating cold-start users, fine-tuning the pretrained model with only <strong>5% labeled data</strong> matched or surpassed the <strong>100% labeled-data from-scratch baseline</strong> on both expression recognition and cognitive-load estimation.",
-      ],
-    },
-    {
-      number: "2",
       icon: "TP",
       title: "Mini-Megatron: Distributed Training Extensions for MiniMind",
       tech: "LLM, Distributed Training",
@@ -72,6 +60,19 @@ window.RESUME_DATA = {
         "Implemented communication primitives with torch.autograd.Function, including AllReduce, AllGather, and ReduceScatter, and built parallel Linear layers, GQA Attention, SwiGLU MLP, Transformer Blocks, Pipeline Stages, and P2P communication modules.",
         "Implemented <strong>distributed Cross Entropy</strong> to avoid gathering full logits for loss computation; built sequence-parallel data flow, activation recomputation, <strong>PP 1F1B scheduling</strong>, and asynchronous linear layers that overlap input-gradient communication with weight-gradient GEMM.",
         "Constructed end-to-end consistency tests between the original and parallelized models, keeping all maximum errors below <strong>1e-5</strong>. Two-GPU TP reduced peak memory by about <strong>44%</strong> compared with single-GPU training, while asynchronous communication improved throughput by about <strong>9%</strong>; SP and VP further reduced activation memory by about <strong>14%</strong> on top of TP.",
+      ],
+    },
+    {
+      number: "2",
+      icon: "RL",
+      title: "Efficient Multimodal Representation Learning and Cross-user Generalization",
+      tech: "PyTorch, ViT, MAE",
+      date: "Jul 2025 - Mar 2026",
+      bullets: [
+        "Designed and implemented a <strong>self-supervised representation learning framework</strong> for multimodal time-series sensor data, targeting cross-user generalization and personalized adaptation; industry collaboration between USI and Emteq Labs.",
+        "Built a native multimodal architecture that maps heterogeneous sensor streams into a <strong>shared representation space</strong>, and pretrained a ViT backbone with <strong>MAE</strong>; designed modality-aware embeddings and masking strategies.",
+        "Injected Euler angles as task-relevant priors into the representation learning process; proposed a <strong>user library and user routing mechanism</strong> that uses user identity as a zero-cost weak supervision signal for both generalization and personalization.",
+        "Under user-level 5-fold cross-validation simulating cold-start users, fine-tuning the pretrained model with only <strong>5% labeled data</strong> matched or surpassed the <strong>100% labeled-data from-scratch baseline</strong> on both expression recognition and cognitive-load estimation.",
       ],
     },
     {
